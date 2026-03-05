@@ -7,19 +7,28 @@ def registrar_estudiante():
         print("El estudiante ya existe.")
     else:
         estudiantes[nombre] = []
+        print("*" * 50)
         print("Estudiante registrado correctamente.")
+        print("*" * 50)
 
 
 def registrar_nota():
     nombre = input("Ingrese el nombre del estudiante: ")
     
     if nombre in estudiantes:
-        try:
-            nota = float(input("Ingrese la nota: "))
-            estudiantes[nombre].append(nota)
-            print("Nota registrada correctamente.")
-        except:
-            print("Debe ingresar un número válido.")
+        while True:
+            try:
+                nota = float(input("Ingrese la nota (0 a 5): "))
+                
+                if 0 <= nota <= 5:
+                    estudiantes[nombre].append(nota)
+                    print("Nota registrada correctamente.")
+                    break
+                else:
+                    print("La nota debe estar entre 0 y 5.")
+                    
+            except:
+                print("Debe ingresar un número válido.")
     else:
         print("El estudiante no existe.")
 

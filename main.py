@@ -3,12 +3,12 @@ from src.funtions import *
 def inicio():
     
     while True:
-        print("\n===== SISTEMA DE NOTAS =====")
+        print("\n********** SISTEMA DE NOTAS **********\n")
         print("1. Registrar Estudiante")
         print("2. Registrar Nota")
         print("3. Ver Promedio Individual")
         print("4. Ver Estudiantes")
-        print("5. Salir")
+        print("5. Salir\n")
        
     
         opcion = input("Seleccione una opción: ")
